@@ -16,7 +16,7 @@
     "generators"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.24.0"
+    "yeoman-generator": "^0.24.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
