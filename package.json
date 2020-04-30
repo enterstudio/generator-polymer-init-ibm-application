@@ -16,7 +16,8 @@
     "generators"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.24.0"
+    "yeoman-generator": "^0.24.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
@@ -30,11 +31,13 @@
     "yeoman-test": "^1.5.0"
   },
   "scripts": {
-    "prepublish": "gulp prepublish",
+    "prepublish": "yarn run snyk-protect && gulp prepublish",
     "lint": "eslint . --ext js,html",
-    "test": "gulp test"
+    "test": "gulp test",
+    "snyk-protect": "snyk protect"
   },
   "engines": {
     "node": ">=4.0"
-  }
+  },
+  "snyk": true
 }
